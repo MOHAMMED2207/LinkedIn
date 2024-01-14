@@ -1,0 +1,40 @@
+[debug] [2024-01-14T15:57:40.495Z] ----------------------------------------------------------------------
+[debug] [2024-01-14T15:57:40.498Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\moomu\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-01-14T15:57:40.499Z] CLI Version:   13.0.3
+[debug] [2024-01-14T15:57:40.500Z] Platform:      win32
+[debug] [2024-01-14T15:57:40.500Z] Node Version:  v18.18.0
+[debug] [2024-01-14T15:57:40.501Z] Time:          Sun Jan 14 2024 17:57:40 GMT+0200 (Eastern European Standard Time)
+[debug] [2024-01-14T15:57:40.502Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-01-14T15:57:40.632Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-01-14T15:57:40.633Z] > authorizing via signed-in user (moomudi21@gmail.com)
+[debug] [2024-01-14T15:57:40.633Z] [iam] checking project linkedinclone-e2706 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-01-14T15:57:40.636Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/linkedinclone-e2706:testIamPermissions [none]
+[debug] [2024-01-14T15:57:40.637Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/linkedinclone-e2706:testIamPermissions x-goog-quota-user=projects/linkedinclone-e2706
+[debug] [2024-01-14T15:57:40.637Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/linkedinclone-e2706:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-01-14T15:57:41.537Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/linkedinclone-e2706:testIamPermissions 200
+[debug] [2024-01-14T15:57:41.537Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/linkedinclone-e2706:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-01-14T15:57:41.538Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/linkedinclone-e2706/serviceAccounts/linkedinclone-e2706@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2024-01-14T15:57:41.538Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/linkedinclone-e2706/serviceAccounts/linkedinclone-e2706@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2024-01-14T15:57:42.424Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/linkedinclone-e2706/serviceAccounts/linkedinclone-e2706@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2024-01-14T15:57:42.425Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/linkedinclone-e2706/serviceAccounts/linkedinclone-e2706@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2024-01-14T15:57:42.426Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/linkedinclone-e2706 [none]
+[debug] [2024-01-14T15:57:42.741Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/linkedinclone-e2706 200
+[debug] [2024-01-14T15:57:42.741Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/linkedinclone-e2706 {"projectId":"linkedinclone-e2706","projectNumber":"704046675382","displayName":"LinkedinClone","name":"projects/linkedinclone-e2706","resources":{"hostingSite":"linkedinclone-e2706","storageBucket":"linkedinclone-e2706.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_22d24282-bcb2-4b88-8c99-4885aa88aa90"}
+[info] 
+[info] === Deploying to 'linkedinclone-e2706'...
+[info] 
+[info] i  deploying firestore, functions, hosting 
+[debug] [2024-01-14T15:57:42.928Z] TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string. Received undefined
+    at new NodeError (node:internal/errors:405:5)
+    at validateString (node:internal/validators:162:11)
+    at Object.join (node:path:429:7)
+    at Config.path (C:\Users\moomu\AppData\Roaming\npm\node_modules\firebase-tools\lib\config.js:125:45)
+    at getChildEnvironment (C:\Users\moomu\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\lifecycleHooks.js:56:49)
+    at runTargetCommands (C:\Users\moomu\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\lifecycleHooks.js:77:14)
+    at C:\Users\moomu\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\lifecycleHooks.js:151:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async chain (C:\Users\moomu\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\index.js:38:9)
+    at async deploy (C:\Users\moomu\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\index.js:94:5)
+[error] 
+[error] Error: An unexpected error has occurred.
